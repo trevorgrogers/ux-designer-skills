@@ -1,0 +1,22 @@
+{
+  "name": "ux-designer-skills",
+  "version": "0.1.0",
+  "description": "UX design toolkit with expert agents and framework skills — Laws of UX, Nielsen heuristics, accessibility, design systems, and more",
+  "repository": "https://github.com/trevorgrogers/ux-designer-skills",
+  "keywords": [
+    "ux",
+    "design",
+    "usability",
+    "accessibility",
+    "design-systems",
+    "heuristics",
+    "laws-of-ux",
+    "interaction-design",
+    "information-architecture",
+    "user-research"
+  ],
+  "author": {
+    "name": "Trevor Rogers"
+  },
+  "license": "MIT"
+}

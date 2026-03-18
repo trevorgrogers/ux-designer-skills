@@ -1,0 +1,25 @@
+{
+  "name": "ux-designer-skills",
+  "owner": {
+    "name": "Trevor Rogers",
+    "url": "https://github.com/trevorgrogers"
+  },
+  "metadata": {
+    "description": "UX Designer Skills — expert design guidance with 7 agents and 16 skills for Claude Code",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "ux-designer-skills",
+      "source": "./plugins/ux-designer-skills",
+      "description": "UX design toolkit with 7 specialist agents and 16 skills — Laws of UX, Nielsen heuristics, WCAG, Figma best practices, vibe coding, and more",
+      "version": "0.1.0",
+      "author": {
+        "name": "Trevor Rogers"
+      },
+      "homepage": "https://github.com/trevorgrogers/ux-designer-skills",
+      "license": "MIT",
+      "category": "design"
+    }
+  ]
+}
