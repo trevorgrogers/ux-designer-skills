@@ -1,9 +1,11 @@
 ---
 name: modern-css
-description: Modern CSS capabilities designers should know — container queries, :has(), view transitions, scroll-driven animations, subgrid, fluid typography. Use when designing responsive layouts, specifying component behavior, or bridging design-to-development communication.
+description: Modern CSS capabilities designers should know - container queries, :has(), view transitions, scroll-driven animations, subgrid, fluid typography. Use when designing responsive layouts, specifying component behavior, or bridging design-to-development communication.
 ---
 
 # Modern CSS for Designers
+
+Designers who don't understand what CSS can do design things that are either impossible to build or unnecessarily hard to build. You don't need to write CSS. But you need to know what's possible natively so you stop handing off designs that require JavaScript hacks for things CSS does out of the box.
 
 ## When to Use This Skill
 
@@ -28,7 +30,7 @@ Components adapt based on their container's size, not the viewport.
 }
 ```
 
-**Why designers care:** A card component in a sidebar behaves differently than the same card in main content — automatically. True component reusability.
+**Why designers care:** A card component in a sidebar behaves differently than the same card in main content - automatically. True component reusability.
 
 ---
 
@@ -54,7 +56,7 @@ h1 { font-size: clamp(2rem, 5vw + 1rem, 4rem); }
 ```
 
 **Rules:**
-- Always combine vw with rem (pure vw doesn't respond to browser zoom — accessibility issue)
+- Always combine vw with rem (pure vw doesn't respond to browser zoom - accessibility issue)
 - Use consistent viewport calculations across elements for synchronized scaling
 - Tools: [fluidtypography.com](https://fluidtypography.com), [clampgenerator.com](https://clampgenerator.com)
 
@@ -82,7 +84,7 @@ Child grids inherit parent grid tracks. Cards in a grid maintain aligned headers
 
 ## View Transitions API
 
-Native browser transitions between states or pages. Smooth page transitions, shared element transitions (thumbnail → full image), state changes — all handled natively.
+Native browser transitions between states or pages. Smooth page transitions, shared element transitions (thumbnail → full image), state changes - all handled natively.
 
 ---
 
@@ -101,13 +103,13 @@ Animate based on scroll position rather than time.
 When handing off responsive behavior, specify:
 1. **Container breakpoints** (not just viewport breakpoints)
 2. **Fluid ranges** (min/max sizes for typography and spacing)
-3. **Layout shifts** (what changes at each breakpoint — grid columns, stack direction)
+3. **Layout shifts** (what changes at each breakpoint - grid columns, stack direction)
 4. **Animation triggers** (on scroll, on hover, on state change)
 5. **Easing and duration** (map to the motion design token system)
 
 ---
 
 ## Related Skills
-- `design-systems` — Token architecture that maps to CSS custom properties
-- `motion-design` — Animation principles and easing curves
-- `figma-at-scale` — Figma variables that map to CSS tokens
+- `design-systems` - Token architecture that maps to CSS custom properties
+- `motion-design` - Animation principles and easing curves
+- `figma-at-scale` - Figma variables that map to CSS tokens

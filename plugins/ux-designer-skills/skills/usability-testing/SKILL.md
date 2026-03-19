@@ -1,14 +1,16 @@
 ---
 name: usability-testing
-description: Usability testing methodology — study design, task creation, moderation techniques, analysis, and reporting. Use when planning user tests, writing test scripts, analyzing results, or presenting findings.
+description: Usability testing methodology - study design, task creation, moderation techniques, analysis, and reporting. Use when planning user tests, writing test scripts, analyzing results, or presenting findings.
 ---
 
 # Usability Testing
 
+Most teams skip usability testing because they think it's slow and expensive. It's neither. Five users, one afternoon, and a prototype that doesn't even need to work. That's it. The alternative is shipping something nobody can use and spending 3 months fixing it. Testing is faster.
+
 ## When to Use This Skill
 
 **Auto-loaded by agents:**
-- usability-researcher — For all research work
+- usability-researcher - For all research work
 
 **Use when you need:**
 - Test plan for a design or prototype
@@ -53,8 +55,10 @@ description: Usability testing methodology — study design, task creation, mode
 ## The 5-User Rule
 Jakob Nielsen's research shows **5 users find ~85% of usability problems**. Run small tests frequently rather than large tests infrequently.
 
+The biggest mistake teams make isn't skipping testing. It's testing to validate instead of testing to learn. If you go in wanting to prove your design works, you'll ignore every signal that it doesn't. Go in wanting to find problems. They're there.
+
 ---
 
 ## Related Skills
-- `design-heuristics` — Expert evaluation (complements user testing)
-- `laws-of-ux` — Principles for diagnosing why users struggle
+- `design-heuristics` - Expert evaluation (complements user testing)
+- `laws-of-ux` - Principles for diagnosing why users struggle

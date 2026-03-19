@@ -1,6 +1,6 @@
 ---
 name: figma-ai-coding
-description: Figma to code with AI — MCP server workflow, vibe coding, Code Connect, file preparation, design tokens, and plugin ecosystem. Use when going from Figma designs to production code with Claude Code, Cursor, or other AI coding tools.
+description: Figma to code with AI - MCP server workflow, vibe coding, Code Connect, file preparation, design tokens, and plugin ecosystem. Use when going from Figma designs to production code with Claude Code, Cursor, or other AI coding tools.
 ---
 
 # Figma + AI Coding Workflows
@@ -17,7 +17,7 @@ description: Figma to code with AI — MCP server workflow, vibe coding, Code Co
 
 ---
 
-## 1. Figma MCP Server — Complete Reference
+## 1. Figma MCP Server - Complete Reference
 
 ### What It Is
 
@@ -83,7 +83,7 @@ Or: Settings > MCP > Add new global MCP server > URL: `https://mcp.figma.com/mcp
 
 **`get_screenshot`** captures a pixel-accurate image of the selected frame. Keep this enabled unless you are managing token limits. It serves as the ground truth for visual validation.
 
-**`get_metadata`** returns a lightweight XML representation. Use it when `get_design_context` returns truncated output on large designs — fetch metadata first, then re-fetch specific child nodes individually.
+**`get_metadata`** returns a lightweight XML representation. Use it when `get_design_context` returns truncated output on large designs - fetch metadata first, then re-fetch specific child nodes individually.
 
 **`get_variable_defs`** extracts design tokens directly. Prompt examples: "list all tokens used", "what color and spacing variables are in my selection?"
 
@@ -123,8 +123,8 @@ Keep this screenshot accessible as the source of truth for visual validation thr
 
 ### Step 4: Download Required Assets
 Download images, icons, and SVGs from the Figma MCP server's built-in assets endpoint. Critical rules:
-- **Use localhost sources returned by the server directly** — do not modify URLs
-- **Do NOT import new icon packages** — all assets should come from the Figma payload
+- **Use localhost sources returned by the server directly** - do not modify URLs
+- **Do NOT import new icon packages** - all assets should come from the Figma payload
 - **Do NOT create placeholder assets** if localhost sources are provided
 
 ### Step 5: Translate to Project Conventions
@@ -172,7 +172,7 @@ Compare the implementation side-by-side with the Figma screenshot. Verify:
 
 - The Figma MCP server provides an assets endpoint for images and SVG files
 - IMPORTANT: Use localhost sources returned by the Figma MCP server directly
-- IMPORTANT: Do NOT import/add new icon packages — all assets should be in the Figma payload
+- IMPORTANT: Do NOT import/add new icon packages - all assets should be in the Figma payload
 - IMPORTANT: Do NOT create placeholder images/icons when a localhost source is provided
 
 ## Figma Implementation Flow
@@ -188,7 +188,7 @@ Compare the implementation side-by-side with the Figma screenshot. Verify:
 
 - Treat Figma MCP output as design/behavior representation, not final code
 - Replace Tailwind utilities with project design-system tokens
-- Reuse existing components — do not duplicate
+- Reuse existing components - do not duplicate
 - Use color system, typography, spacing tokens consistently
 - Respect existing routing and state management patterns
 - Achieve 1:1 visual parity; adjust minimally for tokens
@@ -246,10 +246,10 @@ Code Connect is the single most impactful thing you can do to improve AI code ge
 ### MCP Integration
 
 The MCP tools for Code Connect:
-- `get_code_connect_map` — retrieves existing mappings as `{nodeId: {codeConnectSrc, codeConnectName}}`
-- `add_code_connect_map` — creates new mappings between Figma nodes and code components
-- `get_code_connect_suggestions` — AI detects and suggests mappings between design and code components
-- `send_code_connect_mappings` — confirms and finalizes suggested mappings
+- `get_code_connect_map` - retrieves existing mappings as `{nodeId: {codeConnectSrc, codeConnectName}}`
+- `add_code_connect_map` - creates new mappings between Figma nodes and code components
+- `get_code_connect_suggestions` - AI detects and suggests mappings between design and code components
+- `send_code_connect_mappings` - confirms and finalizes suggested mappings
 
 ### Best Practices
 1. Connect frequently-used design system components first (buttons, inputs, cards, nav items)
@@ -287,7 +287,7 @@ Test frame resizing before code generation to ensure expected responsive behavio
 
 ### Use Components for Everything Repeated
 
-Buttons, cards, inputs, nav items, avatars — anything used more than once should be a Figma component. This enables:
+Buttons, cards, inputs, nav items, avatars - anything used more than once should be a Figma component. This enables:
 - Reusable code generation
 - Code Connect mapping
 - Consistent implementation
@@ -370,7 +370,7 @@ Figma variables with modes (light/dark) map to:
 }
 ```
 
-Components always reference `var(--color-background)` — the value changes based on the active theme.
+Components always reference `var(--color-background)` - the value changes based on the active theme.
 
 ### MCP Token Extraction
 
@@ -387,7 +387,7 @@ This returns structured token data you can map to your Tailwind config or CSS cu
 
 ### What It Is
 
-Vibe coding is the practice of using AI to generate code from natural language descriptions, design files, or visual references — where you describe the "vibe" (tone, look, emotional impact) and the function (layout, behavior, interactivity), and AI produces working code. Coined by Andrej Karpathy in early 2025.
+Vibe coding is the practice of using AI to generate code from natural language descriptions, design files, or visual references - where you describe the "vibe" (tone, look, emotional impact) and the function (layout, behavior, interactivity), and AI produces working code. Coined by Andrej Karpathy in early 2025.
 
 The key distinction: you focus on the *what* and *why*, not the *how*. You evaluate the output visually and functionally rather than reading every line of code.
 
@@ -397,7 +397,7 @@ The key distinction: you focus on the *what* and *why*, not the *how*. You evalu
 
 2. **Set up data structure first.** If your app connects to structured data (databases, APIs, Airtable, Supabase), establish the schema before the AI writes logic around it.
 
-3. **Start with a single component, not a whole page.** Break large screens into smaller components — generate cards, headers, and sidebars separately. This reduces errors and keeps context manageable.
+3. **Start with a single component, not a whole page.** Break large screens into smaller components - generate cards, headers, and sidebars separately. This reduces errors and keeps context manageable.
 
 4. **Iterate rapidly.** Get something testable quickly, even if rough. Use AI to spin up several versions, experiment with interactions, and iterate based on feedback.
 
@@ -439,10 +439,10 @@ Figma Make (launched May 2025) is Figma's vibe coding tool. Key features:
 
 ### Which to Use When
 
-- **MCP Server + Code Connect** — Best for teams with established design systems and AI coding workflows (Claude Code, Cursor). Zero plugin overhead, works natively.
-- **Anima** — Best for rapid prototyping and vibe coding. Import full Figma prototypes (multi-screen flows) and get working apps. Strong design system support.
-- **Locofy** — Best for production handoff with ongoing design iteration. GitHub merge feature preserves developer-added business logic across design updates.
-- **Builder.io Visual Copilot** — Best for teams already using Builder.io CMS. Strong Cursor integration. CLI gives developers fine-grained control.
+- **MCP Server + Code Connect** - Best for teams with established design systems and AI coding workflows (Claude Code, Cursor). Zero plugin overhead, works natively.
+- **Anima** - Best for rapid prototyping and vibe coding. Import full Figma prototypes (multi-screen flows) and get working apps. Strong design system support.
+- **Locofy** - Best for production handoff with ongoing design iteration. GitHub merge feature preserves developer-added business logic across design updates.
+- **Builder.io Visual Copilot** - Best for teams already using Builder.io CMS. Strong Cursor integration. CLI gives developers fine-grained control.
 
 ---
 
@@ -536,29 +536,29 @@ Break large screens into smaller components for best results:
 
 ## Sources
 
-- [Guide to the Figma MCP Server — Figma Help Center](https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server)
-- [Figma MCP Server Guide — GitHub](https://github.com/figma/mcp-server-guide)
-- [Tools and Prompts — Figma Developer Docs](https://developers.figma.com/docs/figma-mcp-server/tools-and-prompts/)
-- [Structure Your Figma File for Better Code — Figma Developer Docs](https://developers.figma.com/docs/figma-mcp-server/structure-figma-file/)
-- [Code Connect Integration — Figma Developer Docs](https://developers.figma.com/docs/figma-mcp-server/code-connect-integration/)
-- [Add Custom Rules — Figma Developer Docs](https://developers.figma.com/docs/figma-mcp-server/add-custom-rules/)
-- [Implement Design Skill — Figma MCP Server Guide](https://github.com/figma/mcp-server-guide/blob/main/skills/implement-design/SKILL.md)
-- [Introducing Our Dev Mode MCP Server — Figma Blog](https://www.figma.com/blog/introducing-figma-mcp-server/)
-- [From Claude Code to Figma — Figma Blog](https://www.figma.com/blog/introducing-claude-code-to-figma/)
-- [Claude Code + Figma MCP Server — Builder.io](https://www.builder.io/blog/claude-code-figma-mcp-server)
-- [Figma to Cursor for Designers — Builder.io](https://www.builder.io/blog/figma-to-cursor-for-designers)
-- [Figma to Code with Cursor and Visual Copilot — Builder.io](https://www.builder.io/blog/figma-to-cursor)
-- [Code Connect — Figma Help Center](https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect)
-- [Code Connect Introduction — Figma Developer Docs](https://developers.figma.com/docs/code-connect/)
-- [What is Vibe Coding? — Figma Resource Library](https://www.figma.com/resource-library/what-is-vibe-coding/)
-- [Vibe Coding Tool — Figma Make](https://www.figma.com/solutions/vibe-coding-tool/)
-- [8 Vibe Coding Best Practices (2026) — Softr](https://www.softr.io/blog/vibe-coding-best-practices)
-- [How to Structure Figma Files for MCP — LogRocket](https://blog.logrocket.com/ux-design/design-to-code-with-figma-mcp/)
-- [Figma Variables to Code: Tokens to Tailwind & CSS Vars — Figmafy](https://figmafy.com/figma-variables-to-code-tokens-to-tailwind-css-vars/)
-- [Tailwind Tokens Plugin — Figma Community](https://www.figma.com/community/plugin/1513618945140968492/tailwind-tokens-create-tailwind-css-variables-styles)
-- [TokenFlow: Figma Variables to Tailwind 4 — Figma Community](https://www.figma.com/community/plugin/1605970848776920025/tokenflow-figma-variables-to-tailwind-4)
-- [Figtail: Import Tailwind & Custom CSS as Figma Variables — Figma Community](https://www.figma.com/community/plugin/1605825399470035343/figtail-import-tailwind-custom-css-as-figma-variables)
-- [Anima — Figma to Code](https://www.animaapp.com/figma)
-- [Locofy.ai — Design to Code](https://www.locofy.ai/)
-- [Figma to Code Tool Comparisons — Locofy](https://www.locofy.ai/figma-to-code-tool-comparison)
-- [Rename Layers with AI — Figma Help Center](https://help.figma.com/hc/en-us/articles/24004711129879-Rename-layers-with-AI)
+- [Guide to the Figma MCP Server - Figma Help Center](https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server)
+- [Figma MCP Server Guide - GitHub](https://github.com/figma/mcp-server-guide)
+- [Tools and Prompts - Figma Developer Docs](https://developers.figma.com/docs/figma-mcp-server/tools-and-prompts/)
+- [Structure Your Figma File for Better Code - Figma Developer Docs](https://developers.figma.com/docs/figma-mcp-server/structure-figma-file/)
+- [Code Connect Integration - Figma Developer Docs](https://developers.figma.com/docs/figma-mcp-server/code-connect-integration/)
+- [Add Custom Rules - Figma Developer Docs](https://developers.figma.com/docs/figma-mcp-server/add-custom-rules/)
+- [Implement Design Skill - Figma MCP Server Guide](https://github.com/figma/mcp-server-guide/blob/main/skills/implement-design/SKILL.md)
+- [Introducing Our Dev Mode MCP Server - Figma Blog](https://www.figma.com/blog/introducing-figma-mcp-server/)
+- [From Claude Code to Figma - Figma Blog](https://www.figma.com/blog/introducing-claude-code-to-figma/)
+- [Claude Code + Figma MCP Server - Builder.io](https://www.builder.io/blog/claude-code-figma-mcp-server)
+- [Figma to Cursor for Designers - Builder.io](https://www.builder.io/blog/figma-to-cursor-for-designers)
+- [Figma to Code with Cursor and Visual Copilot - Builder.io](https://www.builder.io/blog/figma-to-cursor)
+- [Code Connect - Figma Help Center](https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect)
+- [Code Connect Introduction - Figma Developer Docs](https://developers.figma.com/docs/code-connect/)
+- [What is Vibe Coding? - Figma Resource Library](https://www.figma.com/resource-library/what-is-vibe-coding/)
+- [Vibe Coding Tool - Figma Make](https://www.figma.com/solutions/vibe-coding-tool/)
+- [8 Vibe Coding Best Practices (2026) - Softr](https://www.softr.io/blog/vibe-coding-best-practices)
+- [How to Structure Figma Files for MCP - LogRocket](https://blog.logrocket.com/ux-design/design-to-code-with-figma-mcp/)
+- [Figma Variables to Code: Tokens to Tailwind & CSS Vars - Figmafy](https://figmafy.com/figma-variables-to-code-tokens-to-tailwind-css-vars/)
+- [Tailwind Tokens Plugin - Figma Community](https://www.figma.com/community/plugin/1513618945140968492/tailwind-tokens-create-tailwind-css-variables-styles)
+- [TokenFlow: Figma Variables to Tailwind 4 - Figma Community](https://www.figma.com/community/plugin/1605970848776920025/tokenflow-figma-variables-to-tailwind-4)
+- [Figtail: Import Tailwind & Custom CSS as Figma Variables - Figma Community](https://www.figma.com/community/plugin/1605825399470035343/figtail-import-tailwind-custom-css-as-figma-variables)
+- [Anima - Figma to Code](https://www.animaapp.com/figma)
+- [Locofy.ai - Design to Code](https://www.locofy.ai/)
+- [Figma to Code Tool Comparisons - Locofy](https://www.locofy.ai/figma-to-code-tool-comparison)
+- [Rename Layers with AI - Figma Help Center](https://help.figma.com/hc/en-us/articles/24004711129879-Rename-layers-with-AI)

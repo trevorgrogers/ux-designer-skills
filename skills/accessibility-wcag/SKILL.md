@@ -5,11 +5,13 @@ description: WCAG 2.1/2.2 guidelines, ARIA patterns, and inclusive design princi
 
 # Accessibility & WCAG
 
+Accessibility is not a compliance checkbox you handle at the end. It's a design quality bar. If your product isn't accessible, it's not finished. Full stop. Every accessibility failure is a user you're turning away. That's not just an ethical problem. It's a revenue problem. And it's a legal one too.
+
 ## When to Use This Skill
 
 **Auto-loaded by agents:**
-- accessibility-auditor — For full audits
-- design-critic — For accessibility dimension in critiques
+- accessibility-auditor - For full audits
+- design-critic - For accessibility dimension in critiques
 
 **Use when you need:**
 - Accessibility audit of a design or implementation
@@ -32,7 +34,7 @@ description: WCAG 2.1/2.2 guidelines, ARIA patterns, and inclusive design princi
 - Focus order is logical
 - Link purpose is clear from text
 
-### Level AA (Target — Industry Standard)
+### Level AA (Target - Industry Standard)
 - **Contrast**: 4.5:1 for normal text, 3:1 for large text (18px+ or 14px+ bold)
 - **Resize**: Text scales to 200% without loss of content
 - **Images of text**: Use real text, not images of text
@@ -75,8 +77,12 @@ description: WCAG 2.1/2.2 guidelines, ARIA patterns, and inclusive design princi
 - [ ] Error messages are specific and actionable
 - [ ] Skip navigation link exists
 
+### The One Thing
+
+If you're only going to do one thing: test with a keyboard. Tab through your entire flow. If you can't complete the core task with only a keyboard, you've failed the most basic accessibility test. Fix that before you touch anything else.
+
 ---
 
 ## Related Skills
-- `design-heuristics` — Overlaps with Nielsen #2, #6, #9
-- `laws-of-ux` — Cognitive accessibility (Cognitive Load, Chunking, Working Memory)
+- `design-heuristics` - Overlaps with Nielsen #2, #6, #9
+- `laws-of-ux` - Cognitive accessibility (Cognitive Load, Chunking, Working Memory)

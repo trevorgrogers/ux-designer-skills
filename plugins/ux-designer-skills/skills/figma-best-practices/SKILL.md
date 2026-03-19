@@ -1,6 +1,6 @@
 ---
 name: figma-best-practices
-description: Figma best practices at scale — file organization, component architecture, design tokens/variables, dev handoff, branching, libraries, and performance. Use when advising on Figma workflow, structuring design systems in Figma, optimizing files, or preparing designs for developer handoff.
+description: Figma best practices at scale - file organization, component architecture, design tokens/variables, dev handoff, branching, libraries, and performance. Use when advising on Figma workflow, structuring design systems in Figma, optimizing files, or preparing designs for developer handoff.
 ---
 
 # Figma Best Practices at Scale
@@ -26,14 +26,14 @@ Mirror your product org structure in Figma. For teams with 50+ designers:
 
 ```
 Organization
-├── Team: Platform — Web
+├── Team: Platform - Web
 │   ├── Project: Authentication
 │   ├── Project: Dashboard
 │   └── Project: Settings
-├── Team: Platform — iOS
+├── Team: Platform - iOS
 │   ├── Project: Authentication
 │   └── Project: Core Experience
-├── Team: Platform — Android
+├── Team: Platform - Android
 ├── Team: Design System
 │   ├── Project: Foundations Library
 │   ├── Project: Components Library
@@ -54,28 +54,28 @@ Organization
 
 ### File Naming Conventions
 
-**Format:** `[Quarter] [Feature/Area] — [Description]`
+**Format:** `[Quarter] [Feature/Area] - [Description]`
 
 Examples:
 ```
-Q1 Onboarding — New User Flow
-Q2 Checkout — Payment Redesign
-Q4 Dashboard — Analytics Cards
+Q1 Onboarding - New User Flow
+Q2 Checkout - Payment Redesign
+Q4 Dashboard - Analytics Cards
 ```
 
 **Rules:**
 - Lead with fiscal quarter + year for chronological sorting
-- Avoid internal nicknames — use names from your ticketing system or test plan
+- Avoid internal nicknames - use names from your ticketing system or test plan
 - Separate words with spaces (Figma search requires it)
 - Keep file names under 40-48 characters (preview truncation limit)
-- Use ticket IDs when aligned with project management: `TWIG-812 — Form Fields A/B Test`
-- Append purpose suffixes: `— Research`, `— Prototype`, `— Specs`
+- Use ticket IDs when aligned with project management: `TWIG-812 - Form Fields A/B Test`
+- Append purpose suffixes: `- Research`, `- Prototype`, `- Specs`
 
 **Research file naming:**
 ```
-Account — Onboarding              (main design file)
-Account — Onboarding — Research   (research companion)
-Account — Onboarding — Prototype  (interactive prototype)
+Account - Onboarding              (main design file)
+Account - Onboarding - Research   (research companion)
+Account - Onboarding - Prototype  (interactive prototype)
 ```
 
 ### Page Structure Within Files
@@ -84,12 +84,12 @@ Every file should follow a consistent page structure:
 
 ```
 📄 Cover                    ← Thumbnail + metadata (always first page)
-📄 —————————————           ← Divider (prefix page name with -)
+📄 -------------           ← Divider (prefix page name with -)
 📄 🎯 Current Sprint
 📄 📐 Wireframes
 📄 🎨 Visual Design
 📄 ✅ Ready for Dev
-📄 —————————————
+📄 -------------
 📄 🧪 Explorations
 📄 📦 Archive
 📄 🧩 Local Components
@@ -185,9 +185,9 @@ Templates (page-level layouts composed of organisms)
 └── Auth Flow Layout
 
 Pages (specific instances of templates with real content)
-├── Home Dashboard — Populated
-├── User Settings — Populated
-└── Product Page — Populated
+├── Home Dashboard - Populated
+├── User Settings - Populated
+└── Product Page - Populated
 ```
 
 **Implementation in Figma:**
@@ -237,7 +237,7 @@ A button with 3 types x 4 states x 2 sizes x with/without icon:
 - Any repeating pattern
 - Navigation bars, toolbars
 - Form layouts
-- Nearly everything — auto layout should be your default
+- Nearly everything - auto layout should be your default
 
 **When to use Constraints:**
 - Pinning elements to edges of a viewport-sized frame
@@ -255,7 +255,7 @@ A button with 3 types x 4 states x 2 sizes x with/without icon:
 2. Name auto layout frames semantically: `card-content`, `button-row`, `nav-items`
 3. Use `fill container` for responsive elements, `hug contents` for intrinsic sizing
 4. Prefer `gap` over padding tricks for spacing between children
-5. Use `absolute position` sparingly — only for overlapping elements like badges on avatars
+5. Use `absolute position` sparingly - only for overlapping elements like badges on avatars
 6. Nest auto layout frames for complex layouts (horizontal inside vertical)
 7. Set `min-width` / `max-width` for responsive behavior
 
@@ -302,7 +302,7 @@ Component: Button
 
 ```
 Collection: Primitives
-├── Mode: Value (single mode — raw values only)
+├── Mode: Value (single mode - raw values only)
 ├── Colors: red-50, red-100, ..., red-900, blue-50, ..., neutral-0, ..., neutral-1000
 ├── Spacing: 0, 1, 2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96
 ├── Radius: 0, 2, 4, 8, 12, 16, 9999 (full)
@@ -385,7 +385,7 @@ Radius tokens:
   radius/xl    → 16
   radius/full  → 9999
 
-Shadow tokens (still use styles, not variables — Figma variables don't support shadows yet):
+Shadow tokens (still use styles, not variables - Figma variables don't support shadows yet):
   shadow/sm
   shadow/md
   shadow/lg
@@ -411,7 +411,7 @@ Semantic:     bg/brand = blue-500
 Component:    button/bg-primary = bg/brand
 ```
 
-- Primitives should never be applied directly to designs — always go through semantic tokens
+- Primitives should never be applied directly to designs - always go through semantic tokens
 - Semantic tokens reference primitives and are what designers apply to layers
 - Component tokens (optional) reference semantic tokens for per-component overrides
 
@@ -517,7 +517,7 @@ CSS custom properties / Tailwind config / iOS / Android
 1. Install Tokens Studio plugin in Figma
 2. Configure Git sync (GitHub, GitLab, Bitbucket, or Azure DevOps)
 3. Map Figma variables to token JSON structure
-4. Push tokens to repo — each Token Set becomes an individual JSON file
+4. Push tokens to repo - each Token Set becomes an individual JSON file
 5. Style Dictionary transforms JSON into platform-specific outputs
 6. CI/CD pipeline auto-builds on token changes
 
@@ -644,7 +644,7 @@ Critical (must-haves):
 4. All states designed (default, hover, active, focus, disabled, loading, error, empty)
 5. Responsive behavior documented or demonstrated
 6. Interaction specifications (what happens on click, hover, swipe)
-7. Real content (not "Lorem ipsum" — real string lengths affect layout)
+7. Real content (not "Lorem ipsum" - real string lengths affect layout)
 
 Nice to have:
 8. Prototype with interactions for complex flows
@@ -707,13 +707,13 @@ figma.connect(Button, "https://figma.com/file/abc123/Button", {
 
 #### Optimizing Files for Handoff
 
-1. **Use auto layout everywhere** — generates clean flexbox/CSS output in Dev Mode
-2. **Apply variables, not hardcoded values** — Dev Mode shows variable names, not just hex codes
-3. **Use consistent component structure** — devs can map Figma component hierarchy to code component hierarchy
-4. **Keep layer hierarchy shallow** — deeply nested frames create unnecessarily complex DOM structures
-5. **Export assets properly** — mark exportable assets, set export settings (SVG for icons, 2x PNG for photos)
-6. **Group related screens in sections** — sections become Dev Mode's primary navigation unit
-7. **Remove exploration/WIP from dev pages** — only finalized work on "Ready for dev" pages
+1. **Use auto layout everywhere** - generates clean flexbox/CSS output in Dev Mode
+2. **Apply variables, not hardcoded values** - Dev Mode shows variable names, not just hex codes
+3. **Use consistent component structure** - devs can map Figma component hierarchy to code component hierarchy
+4. **Keep layer hierarchy shallow** - deeply nested frames create unnecessarily complex DOM structures
+5. **Export assets properly** - mark exportable assets, set export settings (SVG for icons, 2x PNG for photos)
+6. **Group related screens in sections** - sections become Dev Mode's primary navigation unit
+7. **Remove exploration/WIP from dev pages** - only finalized work on "Ready for dev" pages
 
 ---
 
@@ -747,12 +747,12 @@ handoff/Q1-dashboard-specs
 ```
 
 **Type prefixes:**
-- `feature/` — New feature or screen design
-- `fix/` — Bug fix or correction
-- `update/` — Enhancement to existing design
-- `experiment/` — Exploratory work, may not merge
-- `handoff/` — Branch created specifically for dev handoff
-- `refactor/` — Structural cleanup, no visual changes
+- `feature/` - New feature or screen design
+- `fix/` - Bug fix or correction
+- `update/` - Enhancement to existing design
+- `experiment/` - Exploratory work, may not merge
+- `handoff/` - Branch created specifically for dev handoff
+- `refactor/` - Structural cleanup, no visual changes
 
 **Alternative format (aligned with developer conventions):**
 ```
@@ -789,7 +789,7 @@ web-1234-navigation-2026-03-18
 ```
 
 **Conflict resolution:**
-- Figma does NOT merge granularly — if two branches modify the same element, you must choose one version
+- Figma does NOT merge granularly - if two branches modify the same element, you must choose one version
 - Coordinate who works on what before creating branches
 - Keep branches short-lived to minimize conflict risk
 - Merge frequently rather than accumulating large diffs
@@ -797,10 +797,10 @@ web-1234-navigation-2026-03-18
 
 ### Version History Best Practices
 
-- Use **Named Versions** to mark significant milestones: "v2.1 — Updated color system", "Final — Approved by stakeholders"
+- Use **Named Versions** to mark significant milestones: "v2.1 - Updated color system", "Final - Approved by stakeholders"
 - Version history auto-saves every 30 minutes, but you can manually save with a name
 - Named versions serve as restore points if a merge goes wrong
-- Include date and context in version names: `2026-03-18 — Pre-migration snapshot`
+- Include date and context in version names: `2026-03-18 - Pre-migration snapshot`
 
 ---
 
@@ -826,7 +826,7 @@ web-1234-navigation-2026-03-18
 ├── Icon/Social/...
 └── Icon/File/...
 
-🟦 Core Components Library (published) — depends on Foundations + Icons
+🟦 Core Components Library (published) - depends on Foundations + Icons
 ├── Button
 ├── Input
 ├── Checkbox / Radio / Toggle
@@ -840,7 +840,7 @@ web-1234-navigation-2026-03-18
 ├── Tabs
 └── Accordion
 
-🟩 Pattern Library (published) — depends on Core Components
+🟩 Pattern Library (published) - depends on Core Components
 ├── Form patterns (login, signup, settings)
 ├── Navigation patterns (sidebar, header, breadcrumbs)
 ├── Data display patterns (tables, lists, stats)
@@ -868,7 +868,7 @@ Foundations → Icons → Core Components → Patterns → Product Files
 - Smaller files load faster and stay under memory limits
 - Teams can own and iterate on their library independently
 - Breaking changes in one library don't require republishing everything
-- Icons (often 500+) are the most common performance bottleneck — isolating them prevents dragging down the component library
+- Icons (often 500+) are the most common performance bottleneck - isolating them prevents dragging down the component library
 
 #### Library Publishing Workflow
 
@@ -912,7 +912,7 @@ Breaking:
 - Icon property renamed from "leftIcon" to "leadingIcon"
 
 Migration:
-- Button/Outline instances will detach — replace with Button/Ghost manually
+- Button/Outline instances will detach - replace with Button/Ghost manually
 ```
 
 ### Managing Breaking Changes
@@ -928,7 +928,7 @@ Migration:
 
 1. **Deprecation phase:**
    - Mark old component with `[DEPRECATED]` prefix in name
-   - Add a visible "DEPRECATED — Use X instead" label on the component
+   - Add a visible "DEPRECATED - Use X instead" label on the component
    - Keep deprecated component for 2-4 sprint cycles before removal
    - Move deprecated components to a `_Deprecated` page
 
@@ -980,23 +980,23 @@ Brand B Override Library:
 ```
 Figma Memory Model (per browser tab):
 ├── 2 GB hard limit
-├── 60% (~1.2 GB): Yellow warning — may experience multiplayer lag
-├── 75% (~1.5 GB): Red warning — significant performance degradation
-└── 100% (2 GB): File locks — no further editing until memory freed
+├── 60% (~1.2 GB): Yellow warning - may experience multiplayer lag
+├── 75% (~1.5 GB): Red warning - significant performance degradation
+└── 100% (2 GB): File locks - no further editing until memory freed
 ```
 
 ### What Makes Files Slow
 
 **Top causes (in order of impact):**
 
-1. **Too many layers/objects on a single page** — Figma loads the active page into memory
-2. **High-resolution images** — Uncompressed PNGs/photos are the #1 file size offender
-3. **Excessive variants** — Component sets with 500+ variants load all variants into memory
-4. **Deep nesting** — Each nesting level multiplies layout recalculation cost
-5. **Complex effects** — Drop shadows, blurs, and multiple fills add GPU cost
-6. **Hidden layers** — Still count toward memory even when invisible
-7. **Unused components/styles** — Orphaned assets inflate file size
-8. **Large prototype connections** — Files with hundreds of prototype flows
+1. **Too many layers/objects on a single page** - Figma loads the active page into memory
+2. **High-resolution images** - Uncompressed PNGs/photos are the #1 file size offender
+3. **Excessive variants** - Component sets with 500+ variants load all variants into memory
+4. **Deep nesting** - Each nesting level multiplies layout recalculation cost
+5. **Complex effects** - Drop shadows, blurs, and multiple fills add GPU cost
+6. **Hidden layers** - Still count toward memory even when invisible
+7. **Unused components/styles** - Orphaned assets inflate file size
+8. **Large prototype connections** - Files with hundreds of prototype flows
 
 ### File Size Guidelines
 
@@ -1028,7 +1028,7 @@ Critical:            500+ MB     → immediate intervention needed
 
 #### Images
 - [ ] Compress images before importing (use TinyPNG, Squoosh, or ImageOptim)
-- [ ] Resize images to their display size — don't use a 4000x3000 photo in a 400x300 frame
+- [ ] Resize images to their display size - don't use a 4000x3000 photo in a 400x300 frame
 - [ ] Use Figma's "Downsize" feature to reduce image fills to their layer size
 - [ ] Use SVG for icons and illustrations (not PNG)
 - [ ] Remove unused image fills from layers
@@ -1057,15 +1057,15 @@ Critical:            500+ MB     → immediate intervention needed
 
 #### Pages
 - [ ] Archive old pages to a separate file (copy page, delete from main file)
-- [ ] Use page-level loading — Figma only loads the active page into memory
+- [ ] Use page-level loading - Figma only loads the active page into memory
 - [ ] Keep page complexity roughly equal (don't have one page with 90% of the content)
 - [ ] Move exploration/iteration history to an archive file
 
 #### Plugins for Performance
-- **Clean Document** — Remove unused styles, components, and hidden layers
-- **Performance Optimizer & Diagnostics** — Identify and fix performance bottlenecks
-- **TinyImage** — Compress images directly within Figma (up to 95% reduction)
-- **Unused Components** — Find and remove components that aren't instanced anywhere
+- **Clean Document** - Remove unused styles, components, and hidden layers
+- **Performance Optimizer & Diagnostics** - Identify and fix performance bottlenecks
+- **TinyImage** - Compress images directly within Figma (up to 95% reduction)
+- **Unused Components** - Find and remove components that aren't instanced anywhere
 
 ### File Load Time Optimization
 
@@ -1074,7 +1074,7 @@ Figma loads files one page at a time. The page you land on loads first, then oth
 1. Set a lightweight cover page as the default landing page
 2. Keep the most-visited pages lean
 3. Put heavy content (explorations, archives) on pages that are rarely visited
-4. Figma caches recently visited files — frequent files load faster
+4. Figma caches recently visited files - frequent files load faster
 
 ---
 
@@ -1083,64 +1083,64 @@ Figma loads files one page at a time. The page you land on loads first, then oth
 ### File Organization
 - [Figma Best Practices: Team, Project, and File Organization](https://www.figma.com/best-practices/team-file-organization/)
 - [Getting Started with Teams in Figma Organization](https://www.figma.com/best-practices/getting-started-with-teams-in-figma-organization/)
-- [Figma File Organization: A Detailed Guide (2025) — LoopStudio](https://loopstudio.dev/figma-file-organization/)
-- [How We Organize Figma Projects and Files — Lee Munroe](https://leemunroe.medium.com/how-we-organize-figma-projects-and-files-on-our-design-team-adc4a6109dce)
-- [Organize Like a Pro: Ultimate Guide to Figma File Organization — Tasia Sevenard](https://medium.com/@t.sevenard/organize-like-a-pro-ultimate-guide-to-figma-file-organization-8a3b97b60cd7)
-- [Team, Project, File, Branching Naming Examples — Figma Community](https://www.figma.com/community/file/1043509291175170111)
-- [How to Set Up Your Pages in Figma — Figma Blog](https://www.figma.com/blog/five-ways-to-structure-your-workflow-with-pages-in-figma/)
-- [How We Organize Design Files and Cover Pages — Lee Munroe](https://leemunroe.medium.com/how-we-organize-design-files-and-cover-pages-in-figma-6316e3503220)
+- [Figma File Organization: A Detailed Guide (2025) - LoopStudio](https://loopstudio.dev/figma-file-organization/)
+- [How We Organize Figma Projects and Files - Lee Munroe](https://leemunroe.medium.com/how-we-organize-figma-projects-and-files-on-our-design-team-adc4a6109dce)
+- [Organize Like a Pro: Ultimate Guide to Figma File Organization - Tasia Sevenard](https://medium.com/@t.sevenard/organize-like-a-pro-ultimate-guide-to-figma-file-organization-8a3b97b60cd7)
+- [Team, Project, File, Branching Naming Examples - Figma Community](https://www.figma.com/community/file/1043509291175170111)
+- [How to Set Up Your Pages in Figma - Figma Blog](https://www.figma.com/blog/five-ways-to-structure-your-workflow-with-pages-in-figma/)
+- [How We Organize Design Files and Cover Pages - Lee Munroe](https://leemunroe.medium.com/how-we-organize-design-files-and-cover-pages-in-figma-6316e3503220)
 
 ### Component Architecture
-- [Creating Atomic Components in Figma — Figma Blog](https://www.figma.com/blog/creating-atomic-components-in-figma/)
-- [Components, Styles, and Shared Library Best Practices — Figma](https://www.figma.com/best-practices/components-styles-and-shared-libraries/)
-- [Structuring and Splitting Large-Scale Figma Design Systems: A 2025 Master Guide — Claus Nisslmueller](https://medium.com/@claus.nisslmueller/structuring-and-splitting-large-scale-figma-design-systems-a-2025-master-guide-for-scalable-c1c3a7dabb0e)
-- [Explore Component Properties — Figma Learn](https://help.figma.com/hc/en-us/articles/5579474826519-Explore-component-properties)
-- [Mastering Figma Components: Best Naming Practices — Rootstrap](https://www.rootstrap.com/blog/mastering-figma-components-best-naming-practices-for-seamless-design-to-development-workflow)
-- [Mastering Constraints & Auto Layout — UIPrep](https://www.uiprep.com/blog/when-to-use-constraints-vs-auto-layout)
-- [Guide to Auto Layout — Figma Learn](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout)
+- [Creating Atomic Components in Figma - Figma Blog](https://www.figma.com/blog/creating-atomic-components-in-figma/)
+- [Components, Styles, and Shared Library Best Practices - Figma](https://www.figma.com/best-practices/components-styles-and-shared-libraries/)
+- [Structuring and Splitting Large-Scale Figma Design Systems: A 2025 Master Guide - Claus Nisslmueller](https://medium.com/@claus.nisslmueller/structuring-and-splitting-large-scale-figma-design-systems-a-2025-master-guide-for-scalable-c1c3a7dabb0e)
+- [Explore Component Properties - Figma Learn](https://help.figma.com/hc/en-us/articles/5579474826519-Explore-component-properties)
+- [Mastering Figma Components: Best Naming Practices - Rootstrap](https://www.rootstrap.com/blog/mastering-figma-components-best-naming-practices-for-seamless-design-to-development-workflow)
+- [Mastering Constraints & Auto Layout - UIPrep](https://www.uiprep.com/blog/when-to-use-constraints-vs-auto-layout)
+- [Guide to Auto Layout - Figma Learn](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout)
 - [Naming Layers: The Overlooked Tool for Designer-Developer Collaboration](https://www.designsystemscollective.com/naming-layers-the-overlooked-tool-for-designer-to-developer-collaboration-02603d7f36b9)
 
 ### Design Tokens and Variables
-- [Overview of Variables, Collections, and Modes — Figma Learn](https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes)
-- [Guide to Variables in Figma — Figma Learn](https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma)
-- [Modes for Variables — Figma Learn](https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables)
-- [Tailwind Design Tokens: Complete Guide 2025 — Nicola Lazzari](https://nicolalazzari.ai/articles/integrating-design-tokens-with-tailwind-css)
-- [Figma Variables to Code: Tokens to Tailwind & CSS Vars — Figmafy](https://figmafy.com/figma-variables-to-code-tokens-to-tailwind-css-vars/)
-- [Figma Design Tokens: How to Set Up, Sync, and Use Them in Code — TheFrontKit](https://thefrontkit.com/blogs/figma-design-tokens-guide)
-- [Structuring Scalable Figma Variables for Multi-Brand — Border Crossing UX](https://bordercrossingux.com/structuring-figma-variables/)
+- [Overview of Variables, Collections, and Modes - Figma Learn](https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes)
+- [Guide to Variables in Figma - Figma Learn](https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma)
+- [Modes for Variables - Figma Learn](https://help.figma.com/hc/en-us/articles/15343816063383-Modes-for-variables)
+- [Tailwind Design Tokens: Complete Guide 2025 - Nicola Lazzari](https://nicolalazzari.ai/articles/integrating-design-tokens-with-tailwind-css)
+- [Figma Variables to Code: Tokens to Tailwind & CSS Vars - Figmafy](https://figmafy.com/figma-variables-to-code-tokens-to-tailwind-css-vars/)
+- [Figma Design Tokens: How to Set Up, Sync, and Use Them in Code - TheFrontKit](https://thefrontkit.com/blogs/figma-design-tokens-guide)
+- [Structuring Scalable Figma Variables for Multi-Brand - Border Crossing UX](https://bordercrossingux.com/structuring-figma-variables/)
 - [Tokens Studio for Figma Documentation](https://docs.tokens.studio/)
-- [Style Dictionary + SD Transforms — Tokens Studio](https://docs.tokens.studio/transform-tokens/style-dictionary)
-- [Building a Scalable Design Token System: Figma to Code with Style Dictionary — Rahul Maheshwari](https://medium.com/@mailtorahul2485/building-a-scalable-design-token-system-from-figma-to-code-with-style-dictionary-e2c9eacc75aa)
+- [Style Dictionary + SD Transforms - Tokens Studio](https://docs.tokens.studio/transform-tokens/style-dictionary)
+- [Building a Scalable Design Token System: Figma to Code with Style Dictionary - Rahul Maheshwari](https://medium.com/@mailtorahul2485/building-a-scalable-design-token-system-from-figma-to-code-with-style-dictionary-e2c9eacc75aa)
 
 ### Developer Handoff
-- [Guide to Developer Handoff — Figma Best Practices](https://www.figma.com/best-practices/guide-to-developer-handoff/)
-- [The Designer's Handbook for Developer Handoff — Figma Blog](https://www.figma.com/blog/the-designers-handbook-for-developer-handoff/)
-- [Figma Dev Mode Comprehensive Guide 2025 — Skywork](https://skywork.ai/blog/figma-dev-mode-comprehensive-guide-2025-everything-you-need-to-know/)
-- [The Art and Science of Annotations in Dev Mode — Figma Blog](https://www.figma.com/blog/annotations-in-dev-mode/)
-- [Add Measurements and Annotate Designs — Figma Learn](https://help.figma.com/hc/en-us/articles/20774752502935-Add-measurements-and-annotate-designs)
-- [Code Connect — Figma Learn](https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect)
-- [Getting Started with Code Connect CLI — Figma Developer Docs](https://developers.figma.com/docs/code-connect/quickstart-guide/)
-- [Optimize Design Files for Developer Handoff — Figma Learn](https://help.figma.com/hc/en-us/articles/360040521453-Optimize-design-files-for-developer-handoff)
+- [Guide to Developer Handoff - Figma Best Practices](https://www.figma.com/best-practices/guide-to-developer-handoff/)
+- [The Designer's Handbook for Developer Handoff - Figma Blog](https://www.figma.com/blog/the-designers-handbook-for-developer-handoff/)
+- [Figma Dev Mode Comprehensive Guide 2025 - Skywork](https://skywork.ai/blog/figma-dev-mode-comprehensive-guide-2025-everything-you-need-to-know/)
+- [The Art and Science of Annotations in Dev Mode - Figma Blog](https://www.figma.com/blog/annotations-in-dev-mode/)
+- [Add Measurements and Annotate Designs - Figma Learn](https://help.figma.com/hc/en-us/articles/20774752502935-Add-measurements-and-annotate-designs)
+- [Code Connect - Figma Learn](https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect)
+- [Getting Started with Code Connect CLI - Figma Developer Docs](https://developers.figma.com/docs/code-connect/quickstart-guide/)
+- [Optimize Design Files for Developer Handoff - Figma Learn](https://help.figma.com/hc/en-us/articles/360040521453-Optimize-design-files-for-developer-handoff)
 
 ### Branching and Version Control
-- [Branching in Figma — Figma Best Practices](https://www.figma.com/best-practices/branching-in-figma/)
-- [Best Practices for Branching in Figma — Figma Scaling Design](https://www.figma.com/scaling-design/best-practices-for-branching-in-figma/)
-- [Guide to Branching — Figma Learn](https://help.figma.com/hc/en-us/articles/360063144053-Guide-to-branching)
-- [Figma Branches Best Practices — Jason Occhipinti / HP Design](https://medium.com/hp-design/figma-branches-best-practices-ca0871aa1631)
-- [The Complete Guide to Figma Branching — Ben Maclaren](https://ben-maclaren.medium.com/the-complete-guide-to-figma-branching-15bc369f9df6)
-- [From Chaos to Control: Versioning Your Figma Design System — Dan Rotondo](https://medium.com/@dm30roto/from-chaos-to-control-versioning-your-figma-design-system-f0b1fae04a45)
+- [Branching in Figma - Figma Best Practices](https://www.figma.com/best-practices/branching-in-figma/)
+- [Best Practices for Branching in Figma - Figma Scaling Design](https://www.figma.com/scaling-design/best-practices-for-branching-in-figma/)
+- [Guide to Branching - Figma Learn](https://help.figma.com/hc/en-us/articles/360063144053-Guide-to-branching)
+- [Figma Branches Best Practices - Jason Occhipinti / HP Design](https://medium.com/hp-design/figma-branches-best-practices-ca0871aa1631)
+- [The Complete Guide to Figma Branching - Ben Maclaren](https://ben-maclaren.medium.com/the-complete-guide-to-figma-branching-15bc369f9df6)
+- [From Chaos to Control: Versioning Your Figma Design System - Dan Rotondo](https://medium.com/@dm30roto/from-chaos-to-control-versioning-your-figma-design-system-f0b1fae04a45)
 
 ### Libraries at Scale
-- [Guide to Libraries in Figma — Figma Learn](https://help.figma.com/hc/en-us/articles/360041051154-Guide-to-libraries-in-Figma)
-- [Schema 2025: Design Systems for a New Era — Figma Blog](https://www.figma.com/blog/schema-2025-design-systems-recap/)
-- [How to Build a Design System in Figma: A Practical Guide (2026) — Muzli](https://muz.li/blog/how-to-build-a-design-system-in-figma-a-practical-guide-2026/)
-- [Design Systems: Single Library vs. Multiple Libraries — Figma Forum](https://forum.figma.com/archive-21/design-systems-single-library-v-multiple-libraries-25652)
-- [Figma Variables Are Changing Component Architecture — Zoehart](https://medium.com/design-bootcamp/figma-variables-are-changing-component-architecture-heres-how-to-future-proof-your-library-24d8fed4c289)
+- [Guide to Libraries in Figma - Figma Learn](https://help.figma.com/hc/en-us/articles/360041051154-Guide-to-libraries-in-Figma)
+- [Schema 2025: Design Systems for a New Era - Figma Blog](https://www.figma.com/blog/schema-2025-design-systems-recap/)
+- [How to Build a Design System in Figma: A Practical Guide (2026) - Muzli](https://muz.li/blog/how-to-build-a-design-system-in-figma-a-practical-guide-2026/)
+- [Design Systems: Single Library vs. Multiple Libraries - Figma Forum](https://forum.figma.com/archive-21/design-systems-single-library-v-multiple-libraries-25652)
+- [Figma Variables Are Changing Component Architecture - Zoehart](https://medium.com/design-bootcamp/figma-variables-are-changing-component-architecture-heres-how-to-future-proof-your-library-24d8fed4c289)
 
 ### Performance
-- [Reduce Memory Usage in Files — Figma Learn](https://help.figma.com/hc/en-us/articles/360040528173-Reduce-memory-usage-in-files)
-- [Speeding Up File Load Times, One Page at a Time — Figma Blog](https://www.figma.com/blog/speeding-up-file-load-times-one-page-at-a-time/)
-- [Speed Up Your Figma Files & Prototypes — Chris Godby](https://medium.com/@chrisgodby/speed-up-your-figma-files-prototypes-1b3fca11ce6d)
-- [Why Your Figma Files Slow You Down — Phenomenon Studio](https://phenomenonstudio.com/article/why-your-figma-files-slow-you-down-and-how-to-fix-them/)
-- [Performance Optimizer & Diagnostics Plugin — Figma Community](https://www.figma.com/community/plugin/1553042195396005088/performance-optimizer-diagnostics)
-- [Best Practices for Image Optimization in Figma — Noble Desktop](https://www.nobledesktop.com/learn/figma/best-practices-for-image-optimization-in-figma-files)
+- [Reduce Memory Usage in Files - Figma Learn](https://help.figma.com/hc/en-us/articles/360040528173-Reduce-memory-usage-in-files)
+- [Speeding Up File Load Times, One Page at a Time - Figma Blog](https://www.figma.com/blog/speeding-up-file-load-times-one-page-at-a-time/)
+- [Speed Up Your Figma Files & Prototypes - Chris Godby](https://medium.com/@chrisgodby/speed-up-your-figma-files-prototypes-1b3fca11ce6d)
+- [Why Your Figma Files Slow You Down - Phenomenon Studio](https://phenomenonstudio.com/article/why-your-figma-files-slow-you-down-and-how-to-fix-them/)
+- [Performance Optimizer & Diagnostics Plugin - Figma Community](https://www.figma.com/community/plugin/1553042195396005088/performance-optimizer-diagnostics)
+- [Best Practices for Image Optimization in Figma - Noble Desktop](https://www.nobledesktop.com/learn/figma/best-practices-for-image-optimization-in-figma-files)

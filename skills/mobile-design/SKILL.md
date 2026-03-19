@@ -1,9 +1,11 @@
 ---
 name: mobile-design
-description: Mobile-specific design guidelines — iOS Human Interface Guidelines, Material Design 3, gesture navigation, haptic feedback, adaptive layouts, thumb zones. Use when designing mobile apps or evaluating mobile-specific patterns.
+description: Mobile-specific design guidelines - iOS Human Interface Guidelines, Material Design 3, gesture navigation, haptic feedback, adaptive layouts, thumb zones. Use when designing mobile apps or evaluating mobile-specific patterns.
 ---
 
 # Mobile Design
+
+Every design decision is a mobile decision first. More than half your users are on phones. If you design for desktop and then "adapt" for mobile, you're designing for the minority and degrading the experience for the majority. Start with the phone. The desktop version is the adaptation.
 
 ## When to Use This Skill
 
@@ -19,10 +21,10 @@ description: Mobile-specific design guidelines — iOS Human Interface Guideline
 ## iOS Human Interface Guidelines (Key Points)
 
 ### Four Core Principles
-1. **Clarity** — Clean, uncluttered layouts. Ample white space.
-2. **Deference** — Interface guides without competing with content.
-3. **Depth** — Layers, shadows, motion create hierarchy.
-4. **Consistency** — Uniform design language. Predictable interactions.
+1. **Clarity** - Clean, uncluttered layouts. Ample white space.
+2. **Deference** - Interface guides without competing with content.
+3. **Depth** - Layers, shadows, motion create hierarchy.
+4. **Consistency** - Uniform design language. Predictable interactions.
 
 ### Key Specs
 | Element | Spec |
@@ -104,6 +106,6 @@ Design for multiple device classes with a single codebase:
 ---
 
 ## Related Skills
-- `interaction-patterns` — Navigation and overlay patterns
-- `accessibility-wcag` — Touch targets, gestures, screen reader support
-- `design-systems` — Responsive token architecture
+- `interaction-patterns` - Navigation and overlay patterns
+- `accessibility-wcag` - Touch targets, gestures, screen reader support
+- `design-systems` - Responsive token architecture

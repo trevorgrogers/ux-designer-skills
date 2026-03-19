@@ -1,15 +1,17 @@
 ---
 name: interaction-patterns
-description: Common interaction patterns and when to use them — modals, drawers, progressive disclosure, inline editing, navigation patterns, mobile gestures, and form design. Use when choosing between interaction approaches or designing component behavior.
+description: Common interaction patterns and when to use them - modals, drawers, progressive disclosure, inline editing, navigation patterns, mobile gestures, and form design. Use when choosing between interaction approaches or designing component behavior.
 ---
 
 # Interaction Patterns
 
+The right interaction pattern is the one the user doesn't have to learn. If you're choosing between a clever solution and a boring one, boring wins. Boring means the user already knows how it works. Save your creativity for the places that actually differentiate your product.
+
 ## When to Use This Skill
 
 **Auto-loaded by agents:**
-- interaction-designer — For pattern selection
-- design-lead — For interaction architecture decisions
+- interaction-designer - For pattern selection
+- design-lead - For interaction architecture decisions
 
 **Use when you need:**
 - Choosing between competing patterns (modal vs. drawer vs. inline)
@@ -61,21 +63,23 @@ description: Common interaction patterns and when to use them — modals, drawer
 
 ## State Design Checklist
 
+This is where most designs fall apart. Happy path mockups are easy. Designing empty states, error states, loading states, and edge cases is where craft actually shows up. If you haven't designed every state on this list, your design isn't finished.
+
 Every interactive component should define:
-- [ ] **Default** — Initial state
-- [ ] **Hover** — Mouse over (desktop)
-- [ ] **Active/Pressed** — During interaction
-- [ ] **Focus** — Keyboard focus (visible outline)
-- [ ] **Disabled** — Cannot interact
-- [ ] **Loading** — Awaiting response
-- [ ] **Empty** — No content yet
-- [ ] **Error** — Something went wrong
-- [ ] **Success** — Action completed
-- [ ] **Partial** — Partially complete (multi-select, progress)
+- [ ] **Default** - Initial state
+- [ ] **Hover** - Mouse over (desktop)
+- [ ] **Active/Pressed** - During interaction
+- [ ] **Focus** - Keyboard focus (visible outline)
+- [ ] **Disabled** - Cannot interact
+- [ ] **Loading** - Awaiting response
+- [ ] **Empty** - No content yet
+- [ ] **Error** - Something went wrong
+- [ ] **Success** - Action completed
+- [ ] **Partial** - Partially complete (multi-select, progress)
 
 ---
 
 ## Related Skills
-- `laws-of-ux` — Principles behind pattern choices
-- `design-heuristics` — Evaluation framework
-- `accessibility-wcag` — Keyboard and screen reader requirements for each pattern
+- `laws-of-ux` - Principles behind pattern choices
+- `design-heuristics` - Evaluation framework
+- `accessibility-wcag` - Keyboard and screen reader requirements for each pattern

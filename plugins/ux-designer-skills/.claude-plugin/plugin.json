@@ -1,7 +1,7 @@
 {
   "name": "ux-designer-skills",
   "version": "0.1.0",
-  "description": "UX design toolkit with expert agents and framework skills — Laws of UX, Nielsen heuristics, accessibility, design systems, and more",
+  "description": "Opinionated design leadership in your terminal. 7 agents and 16 skills grounded in cognitive psychology, real research, and business outcomes. Built by a design leader, not a framework.",
   "repository": "https://github.com/trevorgrogers/ux-designer-skills",
   "keywords": [
     "ux",

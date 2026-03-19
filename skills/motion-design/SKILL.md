@@ -1,9 +1,11 @@
 ---
 name: motion-design
-description: UI animation principles — Disney's 12 principles applied to interfaces, Material Design motion system, easing curves, duration guidelines, and accessibility (prefers-reduced-motion). Use when specifying animations, transitions, or micro-interactions.
+description: UI animation principles - Disney's 12 principles applied to interfaces, Material Design motion system, easing curves, duration guidelines, and accessibility (prefers-reduced-motion). Use when specifying animations, transitions, or micro-interactions.
 ---
 
 # Motion Design for UI
+
+Motion is communication. Every animation tells the user something: where they came from, where they're going, what just changed. If your animation doesn't communicate, it's decoration, and decoration that moves is worse than decoration that doesn't. It actively distracts.
 
 ## When to Use This Skill
 
@@ -91,6 +93,10 @@ Users with vestibular disorders experience dizziness, nausea, and headaches from
 
 ---
 
+## The Biggest Motion Mistake
+
+The single biggest motion design mistake I see: animating everything. Animation should be invisible most of the time. When it draws attention to itself, it's too much. The best motion design is like good editing in a film. You feel it, but you don't notice it.
+
 ## When NOT to Animate
 
 - User has `prefers-reduced-motion` enabled
@@ -102,6 +108,6 @@ Users with vestibular disorders experience dizziness, nausea, and headaches from
 ---
 
 ## Related Skills
-- `interaction-patterns` — State transitions that motion supports
-- `accessibility-wcag` — WCAG motion requirements (2.2.2, 2.3.1, 2.3.3)
-- `design-systems` — Motion tokens as part of the token system
+- `interaction-patterns` - State transitions that motion supports
+- `accessibility-wcag` - WCAG motion requirements (2.2.2, 2.3.1, 2.3.3)
+- `design-systems` - Motion tokens as part of the token system

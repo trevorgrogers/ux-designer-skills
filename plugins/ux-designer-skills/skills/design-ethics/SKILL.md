@@ -5,6 +5,8 @@ description: Deceptive patterns (dark patterns), ethical design frameworks, pers
 
 # Design Ethics & Deceptive Patterns
 
+Every deceptive pattern is a short-term revenue play that destroys long-term trust. If you have to trick someone into staying, your product isn't good enough. This isn't a moral argument (though it is). It's a business argument. Deceptive patterns tank retention, inflate support costs, and get you sued.
+
 ## When to Use This Skill
 
 **Use when you need:**
@@ -38,10 +40,10 @@ description: Deceptive patterns (dark patterns), ethical design frameworks, pers
 
 For any design decision, ask:
 
-1. **Is the user fully informed?** — Do they understand what will happen?
-2. **Does the user retain genuine choice?** — Can they easily say no?
-3. **Would they feel betrayed?** — If they understood the mechanism, would they feel tricked?
-4. **Who benefits?** — Does this serve the user, the business, or only the business?
+1. **Is the user fully informed?** - Do they understand what will happen?
+2. **Does the user retain genuine choice?** - Can they easily say no?
+3. **Would they feel betrayed?** - If they understood the mechanism, would they feel tricked?
+4. **Who benefits?** - Does this serve the user, the business, or only the business?
 
 **Persuasive** (ethical): Transparent, user retains autonomy, benefits the user. (Duolingo streaks motivate learning.)
 
@@ -69,5 +71,5 @@ For any design decision, ask:
 ---
 
 ## Related Skills
-- `accessibility-wcag` — Overlaps on inclusive, non-discriminatory design
-- `laws-of-ux` — Cognitive biases that deceptive patterns exploit
+- `accessibility-wcag` - Overlaps on inclusive, non-discriminatory design
+- `laws-of-ux` - Cognitive biases that deceptive patterns exploit

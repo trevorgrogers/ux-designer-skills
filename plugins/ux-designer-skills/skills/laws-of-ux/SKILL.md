@@ -7,12 +7,14 @@ description: Master the 30 Laws of UX from lawsofux.com. Apply cognitive psychol
 
 The Laws of UX are a collection of principles from psychology and cognitive science that designers can use to build more intuitive, human-centered interfaces. Based on Jon Yablonski's [Laws of UX](https://lawsofux.com/).
 
+These aren't academic trivia. They're the reason some products feel effortless and others feel like work. When someone says "I don't know why, but this just feels right," there's a named principle behind it. Knowing these means you can design that feeling on purpose, and you can explain exactly why a design doesn't work when someone pushes back.
+
 ## When to Use This Skill
 
 **Auto-loaded by agents:**
-- design-lead — For general UX principle questions
-- design-critic — For grounding critiques in named principles
-- interaction-designer — For pattern selection rationale
+- design-lead - For general UX principle questions
+- design-critic - For grounding critiques in named principles
+- interaction-designer - For pattern selection rationale
 
 **Use when you need:**
 - Justification for a design decision with a named principle
@@ -47,7 +49,7 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 ### Jakob's Law
 **"Users spend most of their time on other sites. They prefer your site to work the same way as all the other sites they already know."**
 
-- Leverage existing mental models — users transfer expectations from familiar products
+- Leverage existing mental models - users transfer expectations from familiar products
 - Use established patterns so users focus on tasks, not learning your interface
 - When redesigning, offer transition periods so users can adapt gradually
 - Innovation should enhance, not replace, familiar interaction patterns
@@ -59,7 +61,7 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 
 - Don't use this as an excuse to limit UI to 7 items
 - Organize content into logical chunks of 5-9 items
-- Working memory capacity varies — design for the lower end
+- Working memory capacity varies - design for the lower end
 - Chunking helps users process and remember information
 - *Origin: George A. Miller, 1956*
 
@@ -95,8 +97,8 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 ### Law of Proximity
 **"Objects that are near each other tend to be grouped together."**
 
-- Use spacing to create visual groups — related elements should be close
-- Proximity overrides similarity — close items are grouped even if they look different
+- Use spacing to create visual groups - related elements should be close
+- Proximity overrides similarity - close items are grouped even if they look different
 - Applies to form fields, navigation items, card layouts, action buttons
 - *Origin: Gestalt psychology*
 
@@ -112,7 +114,7 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 **"People will perceive and interpret ambiguous or complex images in the simplest form possible."**
 
 - The human eye simplifies complex shapes into recognizable patterns
-- Design with simple, clear forms — users will fill in the blanks
+- Design with simple, clear forms - users will fill in the blanks
 - Reduce visual noise so the essential structure is perceived
 - *Origin: Gestalt psychology*
 
@@ -121,7 +123,7 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 
 - Use borders, backgrounds, or containers to group related content
 - Cards, wells, and sections create implicit grouping
-- More explicit than proximity — use when proximity alone is ambiguous
+- More explicit than proximity - use when proximity alone is ambiguous
 
 ### Law of Uniform Connectedness
 **"Elements that are visually connected are perceived as more related than elements with no connection."**
@@ -133,16 +135,16 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 ### Selective Attention
 **"People filter stimuli to focus on what's relevant to their current goals."**
 
-- Users have tunnel vision when task-focused — they miss things outside their focus
+- Users have tunnel vision when task-focused - they miss things outside their focus
 - Don't rely on peripheral elements for critical information
 - Use pattern interrupts carefully (color, motion, contrast) for important messages
-- Banner blindness is real — users learn to ignore areas they expect ads
+- Banner blindness is real - users learn to ignore areas they expect ads
 
 ### Von Restorff Effect (Isolation Effect)
 **"When multiple similar objects are present, the one that differs from the rest is most likely to be remembered."**
 
 - Make the most important element visually distinct (CTA buttons, key metrics)
-- Don't make everything stand out — if everything is bold, nothing is
+- Don't make everything stand out - if everything is bold, nothing is
 - Use color, size, or position to create visual hierarchy
 - Avoid visual competition between multiple "highlighted" elements
 - *Origin: Hedwig von Restorff, 1933*
@@ -163,7 +165,7 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 ### Goal-Gradient Effect
 **"The tendency to approach a goal increases with proximity to the goal."**
 
-- Show progress indicators — users speed up as they see the finish line
+- Show progress indicators - users speed up as they see the finish line
 - Use progress bars, step indicators, and completion percentages
 - Artificial progress (starting at 20% instead of 0%) increases completion rates
 - Break long processes into visible milestones
@@ -171,16 +173,16 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 ### Zeigarnik Effect
 **"People remember uncompleted or interrupted tasks better than completed tasks."**
 
-- Use this to drive engagement — show users what's incomplete
+- Use this to drive engagement - show users what's incomplete
 - Profile completion bars, unfinished onboarding steps, draft indicators
-- Don't abuse it — anxiety-inducing incomplete states harm trust
+- Don't abuse it - anxiety-inducing incomplete states harm trust
 - *Origin: Bluma Zeigarnik, 1927*
 
 ### Peak-End Rule
 **"People judge an experience largely based on how they felt at its most intense point and at its end, not on the sum of every moment."**
 
 - Invest in the emotional peak moment (delight, accomplishment, surprise)
-- End every flow on a positive note — confirmation screens matter
+- End every flow on a positive note - confirmation screens matter
 - A great ending can redeem a mediocre middle
 - Recovery from errors matters more than preventing all errors
 - *Origin: Daniel Kahneman*
@@ -198,14 +200,14 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 
 - Set deadlines and time constraints to drive completion
 - Shorter forms get completed faster than longer forms (even with same fields)
-- Reduce perceived effort — smaller-looking tasks get started sooner
+- Reduce perceived effort - smaller-looking tasks get started sooner
 - Time pressure can improve decision quality (within reason)
 
 ### Flow
 **"A state of complete immersion in a focused, enjoyable activity."**
 
 - Remove friction that breaks concentration (unnecessary confirmations, interruptions)
-- Match challenge to skill level — too easy is boring, too hard is frustrating
+- Match challenge to skill level - too easy is boring, too hard is frustrating
 - Provide clear goals and immediate feedback
 - Minimize distractions and context switches
 - *Origin: Mihaly Csikszentmihalyi*
@@ -218,14 +220,14 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 **"The total amount of mental effort being used in working memory."**
 
 - Three types: intrinsic (task complexity), extraneous (poor design), germane (learning)
-- Reduce extraneous load through clear design — that's the designer's job
+- Reduce extraneous load through clear design - that's the designer's job
 - Don't add decorative elements that compete with functional ones
 - Use established patterns to reduce learning cost (intrinsic load)
 
 ### Chunking
 **"People tend to organize items into groups, or 'chunks,' when presented with complex information."**
 
-- Phone numbers, credit card numbers, dates — chunking makes them manageable
+- Phone numbers, credit card numbers, dates - chunking makes them manageable
 - Apply to navigation (grouped menu items), content (sections), and data (tables)
 - Optimal chunk size is 3-5 items per group
 - Visual chunking (whitespace, borders) supports cognitive chunking
@@ -234,7 +236,7 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 **"A limited-capacity cognitive system responsible for temporarily holding and manipulating information."**
 
 - Don't require users to remember information across screens
-- Show, don't require recall — display previous selections, current context
+- Show, don't require recall - display previous selections, current context
 - Reduce the need to hold information in mind by making it visible
 - Forms should show summaries before final submission
 
@@ -242,7 +244,7 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 **"A mental model represents a person's compressed understanding of how something works."**
 
 - Users have pre-existing mental models based on past experience
-- Your design either matches or violates their model — mismatches cause confusion
+- Your design either matches or violates their model - mismatches cause confusion
 - Research mental models before designing (card sorting, interviews)
 - When you must break a mental model, provide explicit guidance for the transition
 
@@ -263,7 +265,7 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 **"Users often perceive aesthetically pleasing design as design that's more usable."**
 
 - Beautiful interfaces get more patience from users
-- Visual polish masks minor usability problems — which is both a benefit and a testing risk
+- Visual polish masks minor usability problems - which is both a benefit and a testing risk
 - Invest in visual design, but don't let it substitute for usability testing
 - First impressions are heavily influenced by aesthetics
 - *Origin: Masaaki Kurosu & Kaori Kashimura, Hitachi, 1995*
@@ -271,7 +273,7 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 ### Cognitive Bias
 **"Systematic patterns of deviation from rationality in judgment."**
 
-- Users are not rational actors — design for actual behavior, not ideal behavior
+- Users are not rational actors - design for actual behavior, not ideal behavior
 - Anchoring: first information seen disproportionately influences decisions
 - Confirmation bias: users seek information that confirms existing beliefs
 - Status quo bias: users prefer the current state over change
@@ -282,7 +284,7 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 
 - More options reduces satisfaction with the chosen option
 - Provide defaults and recommendations to reduce decision burden
-- Use progressive disclosure — show essential options first, advanced later
+- Use progressive disclosure - show essential options first, advanced later
 - Filter and sort capabilities help users manage large option sets
 - *Directly related to Hick's Law*
 
@@ -315,9 +317,9 @@ The Laws of UX are a collection of principles from psychology and cognitive scie
 ---
 
 ## Related Skills
-- `design-heuristics` — Nielsen's 10 Usability Heuristics
-- `interaction-patterns` — Common interaction patterns and when to use them
-- `accessibility-wcag` — WCAG 2.1/2.2 guidelines and testing
+- `design-heuristics` - Nielsen's 10 Usability Heuristics
+- `interaction-patterns` - Common interaction patterns and when to use them
+- `accessibility-wcag` - WCAG 2.1/2.2 guidelines and testing
 
 ## Source
 Based on [Laws of UX](https://lawsofux.com/) by Jon Yablonski. Laws are grounded in research from cognitive psychology, behavioral science, and human-computer interaction.
