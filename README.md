@@ -39,7 +39,7 @@ Read the full [design philosophy](PHILOSOPHY.md).
 | **design-systems-lead** | Tokens, components, governance. Adoption is the only metric. |
 | **usability-researcher** | Study design, protocols, analysis. Research without action is tourism. |
 
-### 16 Skills
+### 17 Skills
 
 #### Foundations
 | Skill | What You Get |
@@ -58,6 +58,11 @@ Read the full [design philosophy](PHILOSOPHY.md).
 | **motion-design** | Disney's 12 principles for UI. When to animate and when to stop. |
 | **mobile-design** | iOS HIG, Material Design 3, gestures, haptics. Mobile first, always. |
 | **modern-css** | Container queries, :has(), fluid typography. What designers need to know. |
+
+#### AI & Agents
+| Skill | What You Get |
+|-------|-----------|
+| **agentic-product-design** | Proactive vs. reactive agent design, material/metaphor for AI presence, omnipresent agent navigation. Earned from shipping AI-native product, not theorized. |
 
 #### Figma
 | Skill | What You Get |
@@ -84,6 +89,8 @@ Ask design questions naturally:
 "How should I structure the navigation for this app?"
 "Write a usability test plan for onboarding"
 "How should I set up Figma for vibe coding with Claude Code?"
+"Should this AI feature be proactive or reactive?"
+"How should our AI agent show up consistently across surfaces?"
 ```
 
 ## Built On
@@ -99,7 +106,7 @@ Ask design questions naturally:
 
 ## Author
 
-Built by [Trevor Rogers](https://github.com/trevorgrogers). Design leader, currently at Daydream. Previously Meta, Shopify. I build things, lead teams, and believe craft is the edge.
+Built by [Trevor Rogers](https://github.com/trevorgrogers). Design leader at Shopify, working on agentic commerce. Previously Daydream, Meta. I build things, lead teams, and believe craft is the edge.
 
 ## Contributing
 

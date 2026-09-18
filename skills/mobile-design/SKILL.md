@@ -35,8 +35,11 @@ Every design decision is a mobile decision first. More than half your users are 
 | Typography | SF Pro, Dynamic Type support required |
 | Tab bar items | 3-5 items maximum |
 
-### iOS 26 (2025): Liquid Glass
-Most significant visual redesign since 2013. Translucent, rounded elements with optical glass properties. Elements adapt dynamically to light and content.
+### iOS 26 (2025) → iOS 27 (2026): Liquid Glass, Matured
+iOS 26 introduced the most significant visual redesign since 2013: translucent, rounded elements with optical glass properties. iOS 27 pulled back the saturated AI-glow treatment that shipped alongside it — the direction moved toward less color, more fluid/liquid motion. If your AI surfaces are still matching iOS 26's original glow aesthetic, they already read as a generation behind. Don't chase the platform's current AI visual treatment directly — match its underlying material logic (translucency, adaptivity, restraint on color) and carry your own brand metaphor through it. See `agentic-product-design` for how to build a brand-native material language instead of following the platform's each cycle.
+
+### Native AI Surfaces (Camera, Siri, On-Screen Context)
+iOS 27 opened system-level AI context (camera-based recognition, Siri understanding on-screen content) to third-party apps. When your app can plug into a platform AI surface (e.g., a system-level visual search) rather than building a parallel custom one, prefer the platform surface for the parts users expect to feel "built into the phone," and reserve custom UI for the parts that are genuinely yours (recommendations, catalog-specific results). Don't rebuild what the platform already gives you for free just to keep full visual control — that's a maintenance cost with no user-facing upside.
 
 ---
 
@@ -109,3 +112,4 @@ Design for multiple device classes with a single codebase:
 - `interaction-patterns` - Navigation and overlay patterns
 - `accessibility-wcag` - Touch targets, gestures, screen reader support
 - `design-systems` - Responsive token architecture
+- `agentic-product-design` - Designing the AI agent layer on top of these platform conventions

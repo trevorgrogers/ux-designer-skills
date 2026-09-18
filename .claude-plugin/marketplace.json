@@ -5,14 +5,14 @@
     "url": "https://github.com/trevorgrogers"
   },
   "metadata": {
-    "description": "Opinionated design leadership in your terminal. 7 agents and 16 skills built by a design leader, grounded in real research and business outcomes.",
+    "description": "Opinionated design leadership in your terminal. 7 agents and 17 skills built by a design leader, grounded in real research and business outcomes.",
     "version": "0.1.0"
   },
   "plugins": [
     {
       "name": "ux-designer-skills",
       "source": "./plugins/ux-designer-skills",
-      "description": "Opinionated design leadership with 7 specialist agents and 16 skills. Built by a design leader who actually does this work.",
+      "description": "Opinionated design leadership with 7 specialist agents and 17 skills. Built by a design leader who actually does this work.",
       "version": "0.1.0",
       "author": {
         "name": "Trevor Rogers"

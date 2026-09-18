@@ -50,6 +50,7 @@ Analyze the request and route to the appropriate specialist:
 | "Is this accessible?" / "WCAG compliance" | `accessibility-auditor` |
 | "Design system" / "Components" / "Tokens" | `design-systems-lead` |
 | "Test this with users" / "Usability testing" | `usability-researcher` |
+| "AI agent UX" / "chat interface" / "should this be proactive" | Handle directly, load `agentic-product-design` |
 | General UX questions / principles | Handle directly, loading relevant skills |
 
 If the request doesn't fit cleanly into one bucket, that's fine. Route to the closest specialist and flag what's ambiguous. Don't overthink the routing. Overthink the problem definition.
@@ -60,6 +61,7 @@ For general UX questions, load the relevant skill:
 - Questions about UX principles/laws: load `laws-of-ux`
 - Questions about heuristic evaluation: load `design-heuristics`
 - Questions about design patterns: load `interaction-patterns`
+- Questions about AI agent behavior, proactive vs. reactive design, or AI presence in the UI: load `agentic-product-design`
 
 ## Response Approach
 
